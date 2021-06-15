@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html>
+    
+    <meta charset="UTF-8">
+<head>
+    {%load static%}
+    <title> 수경이의 페이지</title>
+   <style>
+       
+/*animation*/
+@keyframes rolling {
+    0% {
+       transform: translateY(0)
+    }
+    30%{
+        transform: translateY(-25%)
+    }
+    60%{
+        transform: translateY(-50%)
+    }
+   
+    100%{
+        transform: translateY(-75%)
+    }
+
+}
+@media (min-width:768px){
+    .protrait{
+        position: fixed;
+        left:0;
+        top:0;
+        width: 60vw;
+        height: 100vh;
+        padding:0;
+    }
+    .profile {
+        margin-left:60vw;
+    }
+}
+
+/*Css reset*/
+body ,p ,h1,h3, ul,div{margin: 0; background-color: white ; color: black} /*브라우저가 기본으로 제공하는 스타일을 없애줌*/
+
+h1{ font-size: 100%; font-weight: normal;}
+li{
+    list-style-type: none ;
+}
+a{ 
+    color: inherit;
+    text-decoration: none;
+}
+
+.protrait{ background-image: url("{%static 'mypick.jpeg' %}"); 
+            background-size: cover; background-position: center; 
+    padding-top: 56.25% ; 
+}
+
+.profile { 
+    padding : 7%; 
+ }
+
+ .profile-header, .profile-section {
+     padding-bottom:  7%;
+ }
+/*------------------------------------------reset------------------------------------*/
+
+ .profile-header{
+
+ }
+
+ .name{
+    font-size: 30px;
+    line-height: 1.5; /*리스트 30px가 한 칸*/
+    color : white
+ }
+
+ .name-intro{
+    display: inline-block; 
+    background-color: pink;
+    color: pink
+    vertical-align: top; /*텍스트 상단 정렬*/
+    height : 1.3em;  /*em은 부모 사이즈의 비율로 계산됨*/
+    overflow : hidden;
+    padding-right : 0.5em;
+ }
+
+ .name-intro-list {
+    animation-name: rolling;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+ }
+ .icons {
+    margin : 20px;
+ }
+ 
+ .icons a {
+    width : 70px;
+    height : 70px;
+    background-size: 60%;   
+    text-indent: -9999px;   
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position:center ;
+ }
+
+ .icons a.instargram {
+    background-image: url("{%static 'ins.png' %}"); 
+   
+ } 
+ .icons a.blog{
+    background-image: url("{%static 'blog.png' %}"); 
+}
+.icons a.github {
+    background-image: url("{%static 'git.png' %}"); 
+}      
+.icons a:hover{background-position-y: 10px;}
+
+.profile-section {
+    padding-bottom: 10%;
+    
+}
+.profile-section h3{ border-top: 3px ;background-color:blanchedalmond;   }
+
+
+        
+        p {background-color: antiquewhite; font-size: medium;} 
+        span{background-color: blanchedalmond; }
+        span:hover { background-color: darksalmon;}
+img { height: 30% ;width:30% ;  display: inline-block; float:right;  }
+
+
+   </style>
+    
+</head>
+
+<body>
+    <!-- 배경 이미지-->
+    <section class="main">
+    <div class ="protrait">
+
+    </div>
+    <div class = "profile">
+        <div class="profile-header"> 
+            <div class="name"> 
+                <h1>  이수경  </h1> <br>
+                <div class="name-intro">
+                    <ul class="name-intro-list">
+                        <li>Dankook University</li> 
+                        <li> Software </li>
+                        <li>live in Incheon</li>
+                        <li>Dankook University</li> 
+                    </ul>  
+                </div>
+                
+            
+            </div>
+            
+            <div class="icons">
+                <a class="instargram" href="https://www.instagram.com/lisu_gang/?hl=ko"> bbbb </a>
+                <a class="blog"  href ="https://blog.naver.com/dltnrud001103" > bbbb</a>
+                <a class="github"  href="https://github.com/SuGangLee?tab=repositories"> bbbb</a>
+
+            </div>
+        </div>
+        <!--소개글-->
+        <p> 
+
+        </p>
+        
+        <div class="profile-section" > <a href="#self-intro"><h3> Self-Introduction </a>
+            <h1> Lee Su Kyoung </h1> <hr>
+                <p>
+                    안녕하세요. 저는 단국대학교 소프트웨어학과에 3학년으로 재학중인 22세 이수경입니다. <br>
+                    저의 취미는 <a href="#산책" > <span> 산책하기 </span>, <a href="#영화" > <span> 영화보기 </span>, 
+                        <a href="#여행" > <span> 여행 </span> 입니다.  <br>
+                    3학년인 만큼 진로의 고민이 깊어진 요즘, 본격적으로 서버 공부를 해보려고 합니다. <br> 
+                    앞으로의 노력을 깃허브에 올려볼 생각입니다! <br>
+                    tmi가 많았는데 이 정도로 제 소개를 끝마치겠습니다. <br>
+                    저의 부족한 페이지에 들러주셔서 감사합니다 ^__^ <br>       
+                </p>
+                <hr> 
+        
+        </div> 
+        <hr>
+        <div>  <span>버킷리스트</span> 
+            <ul>
+            <li> 스카이다이빙하기 <br></li>
+            <li> 해외에서 한달살기 <br></li>
+            <li> 열기구 타보기 <br> </li>
+        </ul> 
+    </div>
+        <hr>
+        <div class="profile-section"> <h3> 📞 phone: 010-2462-2806 <br> 클릭 시 메일 전송 <a href="mailto:dltnrud001103@naver.com" target="_top"> -> 📧 email: dltnrud001103@naver.com</a> </h3> 
+        </div>
+       
+            
+
+        </div>
+
+    </div>
+ 
+</section>
+</body>
+
+</html>
